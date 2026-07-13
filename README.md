@@ -1,6 +1,6 @@
 # faculdade
 
-Repositório consolidado com os trabalhos e projetos das disciplinas da faculdade, reunindo em um único lugar o conteúdo que antes estava espalhado em repositórios separados.
+Repositório consolidado com os trabalhos e projetos das disciplinas da faculdade.
 
 | Sigla | Pasta | Disciplina |
 |---|---|---|
