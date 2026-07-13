@@ -1,0 +1,44 @@
+Vitória de Moares Dutra - GES - 414 
+
+QUESTÃO 1 
+
+1 -  MATCH (n) RETURN n;
+
+2 - MATCH (g:Game)  WHERE g.ano > 2012  RETURN g;
+
+3 - MATCH (g:Game)   WHERE g.genero = 'Terror'  RETURN g;
+
+4 - MATCH (j:Jurado)-[r:JOGOU]->(g:Game)  WHERE r.nota >= 7  RETURN g, r.nota, r.horas;
+
+QUESTÃO 2 
+
+1 - CREATE(g:Game{titulo:'The Witcher 3', genero:'RPG', ano:2015});  
+CREATE(g:Game{titulo:'Cyberpunk 2077', genero:'RPG', ano:2020});  
+CREATE(g:Game{titulo:'Fifa 21', genero:'Esporte', ano:2020});  
+CREATE(g:Game{titulo:'Assassin\'s Creed Valhalla', genero:'Aventura', ano:2020});
+
+2- CREATE(j:Jurado{nome:'Juliana'});  
+CREATE(j:Jurado{nome:'Felipe'});  
+CREATE(j:Jurado{nome:'Mariana'});
+
+3 - // Juliana  
+MATCH(j:Jurado{nome:'Juliana'}), (g:Game{titulo:'Fifa 21'})  
+CREATE(j)-[:JOGOU{nota:8, horas:300}]->(g);  
+
+MATCH(j:Jurado{nome:'Juliana'}), (g:Game{titulo:'Assassin\'s Creed Valhalla'})  
+CREATE(j)-[:JOGOU{nota:9, horas:50}]->(g);  
+
+// Felipe  
+MATCH(j:Jurado{nome:'Felipe'}), (g:Game{titulo:'Cyberpunk 2077'})  
+CREATE(j)-[:JOGOU{nota:7, horas:100}]->(g);  
+
+MATCH(j:Jurado{nome:'Felipe'}), (g:Game{titulo:'The Witcher 3'})  
+CREATE(j)-[:JOGOU{nota:10, horas:200}]->(g);  
+
+// Mariana  
+MATCH(j:Jurado{nome:'Mariana'}), (g:Game{titulo:'Phasmophobia'})  
+CREATE(j)-[:JOGOU{nota:6, horas:5}]->(g);  
+
+MATCH(j:Jurado{nome:'Mariana'}), (g:Game{titulo:'Minecraft'})  
+CREATE(j)-[:JOGOU{nota:10, horas:15000}]->(g);
+

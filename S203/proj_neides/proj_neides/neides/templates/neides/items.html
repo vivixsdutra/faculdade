@@ -1,0 +1,16 @@
+{% extends 'neides/base.html' %}
+
+{% block title %}Cadastro de Itens{% endblock %}
+
+{% block content %}
+<h1>Cadastro de Itens</h1>
+<a href="{% url 'add_item' %}"><button>Adicionar Item</button></a>
+<ul>
+    {% for item in items %}
+        <li>{{ item.name }} - R$ {{ item.price }} - Estoque: {{ item.stock }}
+            <a href="{% url 'edit_item' item.pk %}">Editar</a>
+            <a href="{% url 'delete_item' item.pk %}">Excluir</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

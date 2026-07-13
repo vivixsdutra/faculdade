@@ -1,0 +1,50 @@
+{% extends 'neides/base.html' %}
+
+{% block title %}Neides{% endblock %}
+
+{% block content %}
+<h1>Cardápio</h1>
+<h2>Aqui estão as opções deliciosas da Cantina</h2>
+<div class="menu-columns">
+    <div class="menu-column">
+        <h3>Salgados</h3>
+        <ul>
+            {% for item in salgados %}
+                <li>
+                    <div class="item-info">{{ item.name }}</div>
+                    <div class="item-price">R$ {{ item.price }}</div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="menu-column">
+        <h3>Doces</h3>
+        <ul>
+            {% for item in doces %}
+                <li>
+                    <div class="item-info">{{ item.name }}</div>
+                    <div class="item-price">R$ {{ item.price }}</div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="beverages">
+    <h3>Bebidas</h3>
+    <ul>
+        {% for item in bebidas %}
+            <li>
+                <div class="item-info">{{ item.name }}</div>
+                <div class="item-price">R$ {{ item.price }}</div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+<h2>Formas de Pagamento</h2>
+<ul>
+    <li>Cartão de Crédito</li>
+    <li>PayPal</li>
+    <li>Dinheiro</li>
+</ul>
+<a href="{% url 'logout' %}"><button>Logout</button></a>
+{% endblock %}

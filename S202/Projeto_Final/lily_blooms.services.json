@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8ae"
+  },
+  "name": "Decoração de Casamento",
+  "description": "Serviço completo de decoração para casamentos",
+  "price": 5000
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8af"
+  },
+  "name": "Decoração de Festa de Aniversário",
+  "description": "Serviço completo de decoração para festas de aniversário",
+  "price": 3000
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8b0"
+  },
+  "name": "Decoração de Evento Corporativo",
+  "description": "Serviço completo de decoração para eventos corporativos",
+  "price": 4000
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8b1"
+  },
+  "name": "Decoração de Chá de Bebê",
+  "description": "Serviço completo de decoração para chá de bebê",
+  "price": 2500
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8b2"
+  },
+  "name": "Decoração de Formatura",
+  "description": "Serviço completo de decoração para formaturas",
+  "price": 3500
+},
+{
+  "_id": {
+    "$oid": "6750fb61900fa71f8d7a5b61"
+  },
+  "name": "aniversario de namora ",
+  "description": "aniversario ",
+  "price": 20
+},
+{
+  "_id": {
+    "$oid": "6750ff5803956e2205fb530e"
+  },
+  "name": "mesversario",
+  "description": "aniversarios ",
+  "price": 100
+},
+{
+  "_id": {
+    "$oid": "675100fbcddcb08d63f2eac3"
+  },
+  "name": "aniversario de casamento ",
+  "description": "aniversarios",
+  "price": 300
+}]

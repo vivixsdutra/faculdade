@@ -1,0 +1,13 @@
+{% extends 'neides/base.html' %}
+
+{% block title %}Login - Neides{% endblock %}
+
+{% block content %}
+<h1>Cantina da Neide</h1>
+<h2>Insira seu login e sua senha</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Entrar</button>
+</form>
+{% endblock %}

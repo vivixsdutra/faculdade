@@ -1,0 +1,16 @@
+{% extends 'neides/base.html' %}
+
+{% block title %}Aplicação de Descontos{% endblock %}
+
+{% block content %}
+<h1>Aplicação de Descontos</h1>
+<ul>
+    {% for discount in discounts %}
+        <li>
+            <div class="discount-info">{{ discount.name }}</div>
+            <div class="discount-percentage">Desconto: {{ discount.percentage }}%</div>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'admin_dashboard' %}"><button>Voltar ao Dashboard</button></a>
+{% endblock %}

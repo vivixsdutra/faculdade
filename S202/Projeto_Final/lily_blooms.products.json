@@ -1,0 +1,216 @@
+[{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b89a"
+  },
+  "name": "Rosas Vermelhas",
+  "description": "Buquê de rosas vermelhas",
+  "price": 50,
+  "stock": 10
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b89b"
+  },
+  "name": "Lírios Brancos",
+  "description": "Buquê de lírios brancos",
+  "price": 60,
+  "stock": 15
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b89c"
+  },
+  "name": "Tulipas Amarelas",
+  "description": "Buquê de tulipas amarelas",
+  "price": 70,
+  "stock": 20
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b89d"
+  },
+  "name": "Orquídeas Roxas",
+  "description": "Buquê de orquídeas roxas",
+  "price": 80,
+  "stock": 5
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b89e"
+  },
+  "name": "Girassóis",
+  "description": "Buquê de girassóis",
+  "price": 55,
+  "stock": 12
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b89f"
+  },
+  "name": "Margaridas",
+  "description": "Buquê de margaridas",
+  "price": 45,
+  "stock": 18
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a0"
+  },
+  "name": "Cravos",
+  "description": "Buquê de cravos",
+  "price": 50,
+  "stock": 10
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a1"
+  },
+  "name": "Hortênsias",
+  "description": "Buquê de hortênsias",
+  "price": 65,
+  "stock": 8
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a2"
+  },
+  "name": "Peônias",
+  "description": "Buquê de peônias",
+  "price": 75,
+  "stock": 7
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a3"
+  },
+  "name": "Lavandas",
+  "description": "Buquê de lavandas",
+  "price": 40,
+  "stock": 20
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a4"
+  },
+  "name": "Amor-perfeito",
+  "description": "Buquê de amor-perfeito",
+  "price": 35,
+  "stock": 25
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a5"
+  },
+  "name": "Camélias",
+  "description": "Buquê de camélias",
+  "price": 60,
+  "stock": 10
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a6"
+  },
+  "name": "Dálias",
+  "description": "Buquê de dálias",
+  "price": 55,
+  "stock": 15
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a7"
+  },
+  "name": "Jasmim",
+  "description": "Buquê de jasmim",
+  "price": 50,
+  "stock": 12
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a8"
+  },
+  "name": "Magnólias",
+  "description": "Buquê de magnólias",
+  "price": 70,
+  "stock": 6
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8a9"
+  },
+  "name": "Narcisos",
+  "description": "Buquê de narcisos",
+  "price": 45,
+  "stock": 18
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8aa"
+  },
+  "name": "Petúnias",
+  "description": "Buquê de petúnias",
+  "price": 50,
+  "stock": 10
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8ab"
+  },
+  "name": "Violetas",
+  "description": "Buquê de violetas",
+  "price": 35,
+  "stock": 20
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8ac"
+  },
+  "name": "Zínias",
+  "description": "Buquê de zínias",
+  "price": 40,
+  "stock": 15
+},
+{
+  "_id": {
+    "$oid": "675044aeb6e648172f31b8ad"
+  },
+  "name": "Begônias",
+  "description": "Buquê de begônias",
+  "price": 55,
+  "stock": 10
+},
+{
+  "_id": {
+    "$oid": "6750fafcd81e1af45d5f8e5a"
+  },
+  "name": "rosas cor de chá ",
+  "description": "rosa ",
+  "price": 35,
+  "stock": 100
+},
+{
+  "_id": {
+    "$oid": "6750fb41900fa71f8d7a5b5f"
+  },
+  "name": "rosas pretas ",
+  "description": "rosas ",
+  "price": 35,
+  "stock": 20
+},
+{
+  "_id": {
+    "$oid": "6750ff3103956e2205fb530c"
+  },
+  "name": "rosas amarelas ",
+  "description": "aranjo de rosas amarelas ",
+  "price": 30,
+  "stock": 20
+},
+{
+  "_id": {
+    "$oid": "675100c4cddcb08d63f2eac0"
+  },
+  "name": "rosas verdes",
+  "description": "buque",
+  "price": 20,
+  "stock": 30
+}]

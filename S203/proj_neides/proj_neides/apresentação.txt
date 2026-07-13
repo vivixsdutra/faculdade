@@ -1,0 +1,103 @@
+Conceitos Arquiteturais
+
+Modelos (Models): Definem a estrutura dos dados e a lógica de negócios.
+
+Arquivo: neides/models.py
+Exemplo:
+ 
+ class Item(models.Model):
+    name = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    stock = models.IntegerField()
+    category = models.CharField(max_length=10, choices=CATEGORY_CHOICES)
+
+Views: Contêm a lógica de apresentação e manipulação dos dados.
+
+Arquivo: neides/views.py
+Exemplo:
+
+@login_required
+def client_dashboard(request):
+    salgados = Item.objects.filter(category='salgado')
+    doces = Item.objects.filter(category='doce')
+    bebidas = Item.objects.filter(category='bebida')
+    return render(request, 'neides/client_dashboard.html', {
+        'salgados': salgados,
+        'doces': doces,
+        'bebidas': bebidas,
+    })
+
+Templates: Definem a estrutura e o layout das páginas HTML.
+
+Arquivos: neides/templates/neides/*.html
+Exemplo:
+
+    {% extends 'neides/base.html' %}
+    
+    {% block content %}
+    <h1>Cardápio</h1>
+    <div class="menu-columns">
+        <div class="menu-column">
+            <h3>Salgados</h3>
+            <ul>
+                {% for item in salgados %}
+                    <li>
+                        <div class="item-info">{{ item.name }}</div>
+                        <div class="item-price">R$ {{ item.price }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="menu-column">
+            <h3>Doces</h3>
+            <ul>
+                {% for item in doces %}
+                    <li>
+                        <div class="item-info">{{ item.name }}</div>
+                        <div class="item-price">R$ {{ item.price }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endblock %}    
+
+Controladores (Controllers)
+
+1. Controlador de Itens
+2. Controlador de Vendas 
+3. Controlador de Descontos 
+
+
+Observer Pattern:
+
+Arquivo: neides/models.py
+Exemplo:
+
+@receiver(post_save, sender=Item)
+@receiver(post_delete, sender=Item)
+def notify_item_change(sender, instance, **kwargs):
+    print(f'Item {instance.name} has been updated/created/deleted.')
+
+Singleton Pattern:
+
+Arquivo: neides/database.py
+Exemplo:
+class DatabaseConnection:
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super(DatabaseConnection, cls).__new__(cls, *args, **kwargs)
+            cls._instance._initialize()
+        return cls._instance
+
+trategy Pattern:
+
+Arquivo: neides/strategies.py
+Exemplo:
+        class FixedDiscount(DiscountStrategy):
+            def apply_discount(self, price):
+                return max(0, price - self.discount_amount)        
+
+

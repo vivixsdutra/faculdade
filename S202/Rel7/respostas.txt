@@ -1,0 +1,69 @@
+Vitória de Moraes Dutra - GES - 414 
+
+###### AGREGAÇÕES #### 
+
+1)
+MATCH (n)   
+RETURN count(n) AS total_nodes;
+
+2)
+MATCH ()-[r]->()   
+RETURN count(r) AS total_relationships;
+
+3)
+MATCH (n)   
+RETURN labels(n) AS node_labels, count(n) AS count   
+GROUP BY node_labels;
+
+4)
+MATCH (n)   
+RETURN avg(size((n)--())) AS average_connections;
+
+5) 
+MATCH (p:Person)   
+RETURN count(p) AS total_persons;
+
+###### MATEMÁTICAS ####### 
+
+1) 
+MATCH (n:Person)   
+RETURN n.name, max(n.age) AS max_age;
+
+2)
+MATCH (n:Person)   
+RETURN sum(n.age) AS total_age;
+
+3)
+MATCH (n:Person)   
+RETURN percentileCont(n.age, 0.5) AS median_age;
+
+4)
+MATCH (n:Person)   
+RETURN n.name, min(n.age) AS min_age;
+
+5)
+MATCH (n:Person)   
+RETURN max(n.age) - min(n.age) AS age_difference;
+
+##### STRING ########
+
+1) 
+MATCH (p:Person)   
+RETURN collect(p.name) AS all_names;
+
+2)
+MATCH (p:Person)   
+WHERE p.name STARTS WITH 'A'   
+RETURN p.name;
+
+3)
+MATCH (p:Person)   
+RETURN p.name, size(p.name) AS name_length;
+
+4)
+MATCH (p:Person)   
+RETURN p.name, toUpper(p.name) AS name_uppercase;
+
+5)
+MATCH (p:Person)   
+RETURN p.name, replace(p.name, 'John', 'Jonathan') AS updated_name;

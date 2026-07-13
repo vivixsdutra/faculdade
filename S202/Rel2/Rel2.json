@@ -1,0 +1,114 @@
+{
+    "Collection": "Aula",
+    "Aulas": [
+      {
+        "AulaId": 1,
+        "Assunto": "Matemática Discreta",
+        "Professor": {
+          "ProfessorId": 101,
+          "Nome": "Marcelo Cisneiros",
+          "Email": "marcelo@inatel.com",
+          "Telefone": "(11) 91234-5678"
+        },
+        "Alunos": [
+          {
+            "AlunoId": 201,
+            "Nome": "Vitória",
+            "Email": "vitoria@inatel.com",
+            "Telefone": "(11) 92345-6789"
+          },
+          {
+            "AlunoId": 202,
+            "Nome": "Olívia",
+            "Email": "olivia@inatel.com",
+            "Telefone": "(11) 93456-7890"
+          },
+          {
+            "AlunoId": 203,
+            "Nome": "Luiz Fernando",
+            "Email": "luiz.fernando@inatel.com",
+            "Telefone": "(11) 94567-8901"
+          },
+          {
+            "AlunoId": 204,
+            "Nome": "Maria Vitória",
+            "Email": "maria.vitoria@inatel.com",
+            "Telefone": "(11) 95678-9012"
+          }
+        ]
+      },
+      {
+        "AulaId": 2,
+        "Assunto": "Arquitetura de Software",
+        "Professor": {
+          "ProfessorId": 102,
+          "Nome": "Jonas Lopes",
+          "Email": "jonas@inatel.com",
+          "Telefone": "(11) 92345-6789"
+        },
+        "Alunos": [
+          {
+            "AlunoId": 205,
+            "Nome": "Eduardo",
+            "Email": "eduardo@inatel.com",
+            "Telefone": "(11) 96789-0123"
+          },
+          {
+            "AlunoId": 206,
+            "Nome": "Fernanda",
+            "Email": "fernanda@inatel.com",
+            "Telefone": "(11) 97890-1234"
+          },
+          {
+            "AlunoId": 207,
+            "Nome": "Gabriel",
+            "Email": "gabriel@inatel.com",
+            "Telefone": "(11) 98901-2345"
+          },
+          {
+            "AlunoId": 208,
+            "Nome": "Helena",
+            "Email": "helena@inatel.com",
+            "Telefone": "(11) 99012-3456"
+          }
+        ]
+      },
+      {
+        "AulaId": 3,
+        "Assunto": "Algoritmos III",
+        "Professor": {
+          "ProfessorId": 103,
+          "Nome": "Rodrigo",
+          "Email": "rodrigo@inatel.com",
+          "Telefone": "(11) 93456-7890"
+        },
+        "Alunos": [
+          {
+            "AlunoId": 209,
+            "Nome": "Isabela",
+            "Email": "isabela@inatel.com",
+            "Telefone": "(11) 90123-4567"
+          },
+          {
+            "AlunoId": 210,
+            "Nome": "João",
+            "Email": "joao@inatel.com",
+            "Telefone": "(11) 91234-5678"
+          },
+          {
+            "AlunoId": 211,
+            "Nome": "Larissa",
+            "Email": "larissa@inatel.com",
+            "Telefone": "(11) 92345-6789"
+          },
+          {
+            "AlunoId": 212,
+            "Nome": "Marcela",
+            "Email": "marcela@inatel.com",
+            "Telefone": "(11) 93456-7890"
+          }
+        ]
+      }
+    ]
+  }
+  

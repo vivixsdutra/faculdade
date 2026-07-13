@@ -1,0 +1,16 @@
+{% extends 'neides/base.html' %}
+
+{% block title %}Controle de Estoque{% endblock %}
+
+{% block content %}
+<h1>Controle de Estoque</h1>
+<ul>
+    {% for item in items %}
+        <li>
+            <div class="item-info">{{ item.name }}</div>
+            <div class="item-stock">Estoque: {{ item.stock }}</div>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'admin_dashboard' %}"><button>Voltar ao Dashboard</button></a>
+{% endblock %}

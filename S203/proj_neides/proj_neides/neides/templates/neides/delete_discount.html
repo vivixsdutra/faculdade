@@ -1,0 +1,13 @@
+{% extends 'neides/base.html' %}
+
+{% block title %}Excluir Desconto{% endblock %}
+
+{% block content %}
+<h1>Excluir Desconto</h1>
+<p>Tem certeza que deseja excluir o desconto "{{ discount.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Excluir</button>
+</form>
+<a href="{% url 'discounts' %}"><button>Voltar</button></a>
+{% endblock %}

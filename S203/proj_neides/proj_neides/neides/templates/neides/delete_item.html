@@ -1,0 +1,12 @@
+{% extends 'neides/base.html' %}
+
+{% block title %}Excluir Item{% endblock %}
+
+{% block content %}
+<h1>Excluir Item</h1>
+<p>Tem certeza que deseja excluir o item "{{ item.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Excluir</button>
+</form>
+{% endblock %}

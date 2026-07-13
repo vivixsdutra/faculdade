@@ -1,0 +1,14 @@
+
+
+{% block title %}Neides{% endblock %}
+
+{% block content %}
+<h1>Bem-vindo ao Sistema de Gestão Neides</h1>
+
+<ul>
+    <li><a href="{% url 'items' %}">Cadastro de Itens</a></li>
+    <li><a href="{% url 'stock' %}">Controle de Estoque</a></li>
+    <li><a href="{% url 'reports' %}">Relatórios de Vendas</a></li>
+    <li><a href="{% url 'discounts' %}">Aplicação de Descontos</a></li>
+</ul>
+{% endblock %}

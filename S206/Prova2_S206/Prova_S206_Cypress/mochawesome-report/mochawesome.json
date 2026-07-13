@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-06-18T23:46:38.782Z",
+    "end": "2025-06-18T23:47:18.750Z",
+    "duration": 39968,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ebbe9384-5fd8-48bd-9bb7-7a1393888b5d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demoqa.cy.js",
+      "file": "cypress\\e2e\\demoqa.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66113ed5-7195-49ae-90b2-3846a959cc1d",
+          "title": "Testes de Qualidade de Software - Prova S206",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve verificar o título da página",
+              "fullTitle": "Testes de Qualidade de Software - Prova S206 Deve verificar o título da página",
+              "timedOut": null,
+              "duration": 7270,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.title().should('eq', 'DEMOQA'); // Altere aqui se usar outro site",
+              "err": {},
+              "uuid": "6e2b9fbc-85a5-4890-9d74-580b211e4d68",
+              "parentUUID": "66113ed5-7195-49ae-90b2-3846a959cc1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve navegar para a seção Elements e validar formulário",
+              "fullTitle": "Testes de Qualidade de Software - Prova S206 Deve navegar para a seção Elements e validar formulário",
+              "timedOut": null,
+              "duration": 9168,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.card-body').contains('Elements').click();\ncy.url().should('include', '/elements');\ncy.get('.main-header').should('contain', 'Elements');\n// Função customizada para verificar seção\nvalidateElementsSection();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.main-header`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.main-header`, but never found it.\n    at Context.eval (webpack://prova_s206_cypress/./cypress/e2e/demoqa.cy.js:11:27)",
+                "diff": null
+              },
+              "uuid": "e6191c03-bf32-4198-8cbc-cec915472908",
+              "parentUUID": "66113ed5-7195-49ae-90b2-3846a959cc1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve falhar ao tentar preencher email inválido (CASO NEGATIVO)",
+              "fullTitle": "Testes de Qualidade de Software - Prova S206 Deve falhar ao tentar preencher email inválido (CASO NEGATIVO)",
+              "timedOut": null,
+              "duration": 12839,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/text-box');\nfillForm({\n  fullName: 'Teste Usuário',\n  email: 'email-invalido',\n  currentAddress: 'Endereço teste',\n  permanentAddress: 'Endereço permanente teste'\n});\n// Validação negativa: espera borda vermelha no campo de e-mail\ncy.get('#userEmail').should('have.css', 'border-color', 'rgb(220, 53, 69)');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<input#userEmail.mr-sm-2.field-error.form-control>' to have CSS property 'border-color' with the value 'rgb(220, 53, 69)', but the value was 'rgb(255, 0, 0)'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<input#userEmail.mr-sm-2.field-error.form-control>' to have CSS property 'border-color' with the value 'rgb(220, 53, 69)', but the value was 'rgb(255, 0, 0)'\n    at Context.eval (webpack://prova_s206_cypress/./cypress/e2e/demoqa.cy.js:25:25)",
+                "diff": "- 'rgb(255, 0, 0)'\n+ 'rgb(220, 53, 69)'\n"
+              },
+              "uuid": "cbd58018-6f83-458f-aa11-3969cc311740",
+              "parentUUID": "66113ed5-7195-49ae-90b2-3846a959cc1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve navegar para a seção Forms e validar o header",
+              "fullTitle": "Testes de Qualidade de Software - Prova S206 Deve navegar para a seção Forms e validar o header",
+              "timedOut": null,
+              "duration": 9548,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.card-body').contains('Forms').click();\ncy.get('.main-header').should('contain', 'Forms');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.main-header`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.main-header`, but never found it.\n    at Context.eval (webpack://prova_s206_cypress/./cypress/e2e/demoqa.cy.js:31:27)",
+                "diff": null
+              },
+              "uuid": "99471ae9-9b41-4643-9721-b0a1b515ab60",
+              "parentUUID": "66113ed5-7195-49ae-90b2-3846a959cc1d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6e2b9fbc-85a5-4890-9d74-580b211e4d68"
+          ],
+          "failures": [
+            "e6191c03-bf32-4198-8cbc-cec915472908",
+            "cbd58018-6f83-458f-aa11-3969cc311740",
+            "99471ae9-9b41-4643-9721-b0a1b515ab60"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 38825,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

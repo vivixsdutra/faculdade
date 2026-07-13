@@ -1,0 +1,13 @@
+{% extends 'neides/base.html' %}
+
+{% block title %}Relatórios de Vendas{% endblock %}
+
+{% block content %}
+<h1>Relatórios de Vendas</h1>
+<ul>
+    {% for sale in sales %}
+        <li>{{ sale.date }} - {{ sale.quantity }} x {{ sale.item.name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'admin_dashboard' %}"><button>Voltar ao Dashboard</button></a>
+{% endblock %}

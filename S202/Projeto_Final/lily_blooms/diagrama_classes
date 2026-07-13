@@ -1,0 +1,41 @@
++-----------------+        +-----------------+        +-----------------+
+|     Product     |        |      Order      |        |      Event      |
++-----------------+        +-----------------+        +-----------------+
+| - _id           |        | - _id           |        | - _id           |
+| - name          |        | - product_id    |        | - name          |
+| - description   |        | - quantity      |        | - date          |
+| - price         |        | - status        |        | - description   |
+| - stock         |        +-----------------+        +-----------------+
++-----------------+        | + create_order  |        | + create_event  |
+| + create_product|        | + read_orders   |        | + read_events   |
+| + read_products |        | + update_order  |        | + update_event  |
+| + update_product|        | + delete_order  |        | + delete_event  |
+| + delete_product|        +-----------------+        +-----------------+
++-----------------+        
+        |
+        |
+        v
++-----------------+
+|    Purchase     |
++-----------------+
+| - _id           |
+| - product_id    |
+| - quantity      |
+| - total_price   |
+| - date          |
++-----------------+
+| + create_purchase|
+| + read_purchases |
++-----------------+
+
++-----------------+
+|    Service      |
++-----------------+
+| - _id           |
+| - name          |
+| - description   |
+| - price         |
++-----------------+
+| + create_service|
+| + read_services |
++-----------------+

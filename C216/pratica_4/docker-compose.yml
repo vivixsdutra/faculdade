@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    container_name: c216_api_alunos
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app

@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "64818495-0876-4632-9c46-40d98348422d",
+		"name": "Prova_S206_CatAPI_VDutra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46014348",
+		"_collection_link": "https://blue-satellite-4034340.postman.co/workspace/Vit%C3%B3ria-Dutra's-Workspace~d3cc6a58-2bb5-40be-80be-fc863c516703/collection/46014348-64818495-0876-4632-9c46-40d98348422d?action=share&source=collection_link&creator=46014348"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Resposta contém raças\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.above(0);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "live_jtSHy9DtCC6XtbVxzwPQZEPGsNXe5LSdBOl7eImlLKfLO4GVbkKI3SC4oq8dLaSl",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.thecatapi.com/v1/breeds",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thecatapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"breeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_VotoValido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "live_jtSHy9DtCC6XtbVxzwPQZEPGsNXe5LSdBOl7eImlLKfLO4GVbkKI3SC4oq8dLaSl",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"image_id\": \"asf2\",\r\n  \"value\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.thecatapi.com/v1/votes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thecatapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"votes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_VotoInvalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "live_jtSHy9DtCC6XtbVxzwPQZEPGsNXe5LSdBOl7eImlLKfLO4GVbkKI3SC4oq8dLaSl",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"image_id\": \"asf2\",\r\n  \"value\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.thecatapi.com/v1/votes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thecatapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"votes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
