@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gerenciador de Tarefas Acadêmicas — página publicada via GitHub Actions e GitHub Pages.">
+  <title>Gerenciador de Tarefas Acadêmicas</title>
+  <style>
+    :root {
+      --papel: #f4f0e8;
+      --linha: rgba(60, 50, 40, 0.06);
+      --margem: #c45c3e;
+      --tinta: #1c1917;
+      --muted: #57534e;
+      --badge-bg: #e7e5e4;
+      --card: #fafaf9;
+      --borda: #d6d3d1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--tinta);
+      background-color: var(--papel);
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 27px,
+        var(--linha) 27px,
+        var(--linha) 28px
+      );
+      font-family: "Segoe UI", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    .pagina {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    @media (min-width: 720px) {
+      .pagina {
+        grid-template-columns: 4px 1fr;
+      }
+    }
+
+    .lombada {
+      background: linear-gradient(180deg, var(--margem) 0%, #9a3412 100%);
+      min-height: 6px;
+    }
+
+    @media (min-width: 720px) {
+      .lombada {
+        min-height: 100vh;
+        width: 4px;
+      }
+    }
+
+    main {
+      max-width: 38rem;
+      padding: clamp(1.75rem, 5vw, 3rem) clamp(1.25rem, 4vw, 2rem) 3rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--margem);
+      background: var(--badge-bg);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      border: 1px solid var(--borda);
+      margin: 0 0 1rem;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+
+    .lead {
+      margin: 0 0 1.75rem;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 0.75rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .grid li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.85rem 1rem;
+      border-radius: 6px;
+      background: var(--card);
+      border: 1px solid var(--borda);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+    }
+
+    .icon {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border: 1px solid var(--borda);
+      font-size: 1rem;
+    }
+
+    .grid strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .grid span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px dashed var(--borda);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--margem);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    footer a:hover {
+      border-bottom-color: var(--margem);
+    }
+
+    .grid a {
+      color: var(--margem);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .grid a:hover {
+      border-bottom-color: var(--margem);
+    }
+  </style>
+</head>
+<body>
+  <div class="pagina">
+    <div class="lombada" aria-hidden="true"></div>
+    <main>
+      <p class="badge" role="status">CI/CD · GitHub Pages</p>
+      <h1>Gerenciador de Tarefas Acadêmicas</h1>
+      <p class="lead">
+        Esta página é publicada automaticamente por um pipeline de CI/CD.
+        O deploy só ocorre após a execução bem-sucedida dos testes e do build,
+        garantindo a qualidade da aplicação.
+      </p>
+      <ul class="grid">
+        <li>
+          <span class="icon" aria-hidden="true">⚙️</span>
+          <div>
+            <strong>Deploy automático</strong>
+            <span>Publicação com GitHub Actions após sucesso dos jobs de teste e build.</span>
+          </div>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">✅</span>
+          <div>
+            <strong>Qualidade antes do ar</strong>
+            <span>Build e testes executados com sucesso antes da página ir ao ar.</span>
+          </div>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">🎓</span>
+          <div>
+            <strong>Projeto acadêmico</strong>
+            <span>Aplicação em Python para organizar tarefas pelo terminal.</span>
+          </div>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">📊</span>
+          <div>
+            <strong>Relatório de testes (pytest-html)</strong>
+            <span>
+              <a href="test-report.html">Abrir o relatório HTML da última execução do pipeline</a>
+              (gerado automaticamente no CI).
+            </span>
+          </div>
+        </li>
+      </ul>
+      <footer id="rodape-repo">
+        Repositório:
+        <a id="repo-link" href="#">carregando…</a>
+      </footer>
+    </main>
+  </div>
+  <script>
+    (function () {
+      var a = document.getElementById("repo-link");
+      var hostMatch = window.location.hostname.match(/^([^.]+)\.github\.io$/i);
+      var repo = window.location.pathname.split("/").filter(Boolean)[0];
+      if (hostMatch && repo) {
+        var user = hostMatch[1];
+        a.href = "https://github.com/" + user + "/" + repo;
+        a.textContent = user + "/" + repo;
+      } else {
+        var foot = document.getElementById("rodape-repo");
+        if (foot) {
+          foot.style.display = "none";
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

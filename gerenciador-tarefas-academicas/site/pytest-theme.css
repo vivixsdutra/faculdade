@@ -1,0 +1,300 @@
+/* Tema alinhado a site/index.html — Gerenciador de Tarefas Acadêmicas */
+
+:root {
+  --papel: #f4f0e8;
+  --linha: rgba(60, 50, 40, 0.06);
+  --margem: #c45c3e;
+  --tinta: #1c1917;
+  --muted: #57534e;
+  --card: #fafaf9;
+  --borda: #d6d3d1;
+  --ok: #166534;
+  --aviso: #b45309;
+  --erro: #b91c1c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: var(--tinta) !important;
+  min-width: 0 !important;
+  max-width: 52rem;
+  margin: 0 auto !important;
+  padding: clamp(1.25rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem) 3rem !important;
+  background-color: var(--papel) !important;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 27px,
+    var(--linha) 27px,
+    var(--linha) 28px
+  ) !important;
+  border-left: 4px solid var(--margem) !important;
+}
+
+#title {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.5rem, 4vw, 2rem) !important;
+  font-weight: 700 !important;
+  color: var(--tinta) !important;
+  letter-spacing: -0.02em !important;
+  margin-top: 0 !important;
+}
+
+body > p:first-of-type {
+  color: var(--muted) !important;
+  font-size: 0.88rem !important;
+}
+
+body > p:first-of-type a {
+  color: var(--margem) !important;
+  font-weight: 600 !important;
+}
+
+#environment-header h2 {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--tinta) !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+#environment-header {
+  margin-top: 1rem !important;
+}
+
+#environment {
+  width: 100% !important;
+  background: var(--card) !important;
+  border: 1px solid var(--borda) !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  font-size: 13px !important;
+}
+
+#environment td {
+  padding: 0.5rem 0.75rem !important;
+  border: 1px solid var(--borda) !important;
+  color: var(--tinta) !important;
+  vertical-align: top !important;
+}
+
+#environment tr:nth-child(odd) {
+  background-color: #fff !important;
+}
+
+#environment tr:nth-child(even) {
+  background-color: var(--card) !important;
+}
+
+.summary {
+  display: block !important;
+  background: var(--card) !important;
+  border: 1px solid var(--borda) !important;
+  border-radius: 8px !important;
+  padding: 1rem 1.1rem 1.25rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset !important;
+}
+
+/* Remove caixas vazias extras do template pytest-html */
+.summary > .additional-summary.summary:empty,
+.summary > .additional-summary.postfix:empty {
+  display: none !important;
+}
+
+.summary__data {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Título em inglês do plugin — usamos "Resumo" no bloco .report-brand */
+.summary__data > h2:first-of-type {
+  display: none !important;
+}
+
+.summary__data > .additional-summary.prefix {
+  order: -1 !important;
+  margin: 0 0 0.75rem 0 !important;
+}
+
+/* Espaçador interno do plugin — não precisamos no layout em coluna */
+.summary__spacer {
+  display: none !important;
+}
+
+.summary .run-count,
+.summary .filter {
+  color: var(--muted) !important;
+}
+
+.summary .controls {
+  flex-wrap: wrap !important;
+  gap: 0.75rem !important;
+  align-items: flex-start !important;
+}
+
+.summary .filters {
+  flex-wrap: wrap !important;
+  gap: 0.35rem 0.75rem !important;
+  align-items: center !important;
+  line-height: 1.5 !important;
+}
+
+.summary .filters input.filter[type="checkbox"] {
+  accent-color: var(--margem) !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  vertical-align: middle !important;
+}
+
+.summary .filters span.failed {
+  color: var(--erro) !important;
+}
+
+.summary .filters span.passed {
+  color: var(--ok) !important;
+}
+
+.summary .filters span.skipped,
+.summary .filters span.xfailed,
+.summary .filters span.rerun {
+  color: var(--aviso) !important;
+}
+
+.summary .filters span.error,
+.summary .filters span.xpassed {
+  color: var(--erro) !important;
+}
+
+.controls .collapse button {
+  font-family: inherit !important;
+  font-size: 12px !important;
+  padding: 0.35rem 0.65rem !important;
+  border-radius: 4px !important;
+  border: 1px solid var(--borda) !important;
+  background: #fff !important;
+  cursor: pointer !important;
+}
+
+.controls .collapse button:hover {
+  border-color: var(--margem) !important;
+  color: var(--margem) !important;
+}
+
+#results-table {
+  border: 1px solid var(--borda) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  color: var(--tinta) !important;
+  font-size: 13px !important;
+  width: 100% !important;
+  background: #fff !important;
+}
+
+#results-table th,
+#results-table td {
+  padding: 0.5rem 0.65rem !important;
+  border: 1px solid var(--borda) !important;
+}
+
+#results-table thead th {
+  background: var(--card) !important;
+  font-weight: 600 !important;
+  color: var(--tinta) !important;
+}
+
+span.passed,
+.passed .col-result {
+  color: var(--ok) !important;
+}
+
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color: var(--aviso) !important;
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: var(--erro) !important;
+}
+
+.logwrapper {
+  background-color: #f5f5f4 !important;
+  border: 1px solid var(--borda) !important;
+  border-radius: 4px !important;
+}
+
+.report-brand {
+  margin: 0 0 1rem 0 !important;
+  padding-bottom: 0.85rem !important;
+  border-bottom: 1px dashed var(--borda) !important;
+}
+
+.report-brand__row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.65rem 1rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+.report-brand .report-badge {
+  display: inline-block !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: var(--margem) !important;
+  background: #e7e5e4 !important;
+  padding: 0.35rem 0.65rem !important;
+  border-radius: 4px !important;
+  border: 1px solid var(--borda) !important;
+  margin: 0 !important;
+}
+
+.report-brand__back {
+  color: var(--margem) !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent !important;
+}
+
+.report-brand__back:hover {
+  border-bottom-color: var(--margem) !important;
+}
+
+.report-summary-title {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--tinta) !important;
+  margin: 0 !important;
+}
+
+a {
+  color: var(--margem) !important;
+}
+
+p {
+  color: var(--tinta) !important;
+}

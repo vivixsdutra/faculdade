@@ -15,3 +15,4 @@ Repositório consolidado com os trabalhos e projetos das disciplinas da faculdad
 | S203 | [S203](S203) | Neides — sistema de controle de cardápio, estoque e pedidos (projeto de Engenharia de Software) |
 | S206 | [S206](S206) | Qualidade de Software |
 | AG02 | [AG02](AG02) | AG2 — Classificação de espécies de flores Iris com Machine Learning |
+| — | [gerenciador-tarefas-academicas](gerenciador-tarefas-academicas) | Gerenciador de Tarefas Acadêmicas — sistema em Python (CLI) para CRUD de tarefas com filtros, testes e CI/CD via GitHub Actions |
